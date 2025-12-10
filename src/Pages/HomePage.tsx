@@ -14,6 +14,7 @@ import PreventiveMaintenance from './PreventiveMaintenance';
 import ResourceUtilization from './ResourceUtilization';
 import StatisticalProcessControl from './StatisticalProcessControl';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AppRoutes from '../Features/Routes/AppRoutes';
 
 export default function HomePage() {
   return (
@@ -32,18 +33,7 @@ export default function HomePage() {
           <DropdownMenu />
         </Toolbar>
       </AppBar>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/kpi" element={<KPI />} />
-        <Route path="/test-throughput" element={<TestThroughputPage />} />
-        <Route path="/anomaly-detection" element={<AnomalyDetection />} />
-        <Route path="/capacity-planning" element={<CapacityPlanning />} />
-        <Route path="/datasheet" element={<Datasheet />} />
-        <Route path="/preventive-maintenance" element={<PreventiveMaintenance />} />
-        <Route path="/predictive-maintenance" element={<PredictiveMaintenance />} />
-        <Route path="/resource-utilization" element={<ResourceUtilization />} />
-        <Route path="/statistical-process-control" element={<StatisticalProcessControl />} />
-      </Routes>
+      <AppRoutes></AppRoutes>
     </Router>
   );
 }

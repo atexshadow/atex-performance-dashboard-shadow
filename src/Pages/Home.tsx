@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Typography, Container } from "@mui/material";
 
-function Home() {
+export default function Home(){
   return (
-    <div><h1>Home</h1></div>
-  )
-}
+    <Container>
+      <Typography variant="h4" gutterBottom>
+        Home Page
+      </Typography>
+      <Typography>
+        This is the Home page. Add charts and metrics here.
+      </Typography>
+    </Container>
+  );
+};
 
-export default Home
